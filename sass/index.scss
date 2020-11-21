@@ -1,98 +1,135 @@
-// 变量 $+变量名
-$w:400px;
-$h:200px;
-$c:red;
-$len:50%*10; // 500%
-/* 标题样式 */
-h1{
-  width: $w;
-  height: $h;
-  color: $c;
-  background-color: #ccc;
+body {
+  min-width: 1090px;
+  height: 100%;
 }
-
-// sass中的注释有两种
-// 1. // sass有的注释，不会被编译到css文件中
-// /* xxx */ 会被编译到css文件中
-
-// 嵌套语法
-.box{
-  width: $w;
-  background-color: lightblue;
-  h2{
-    font-size: 30px;
-    color: blue;
-  }
-  .show{
-    width: 300px;
-    height: 100px;
-    span{
-      color: red;
+#top-content {
+  height: 176px;
+  .top-t {
+    height: 36px;
+    background-color: #333;
+    line-height: 36px;
+    .top-t-inner {
+      width: 1090px;
+      margin: 0 auto;
+      height: 36px;
+      .top-t-inner-l {
+        float: left;
+        color: #b4a078;
+        a {
+          color: #b4a078;
+          text-decoration: underline;
+        }
+        span {
+          font-size: 14px;
+          margin-right: 16px;
+        }
+      }
+      .top-t-inner-r {
+        float: right;
+        color: #5c5c5c;
+        height: 36px;
+        .top-t-nav {
+          color: #afafaf;
+          cursor: pointer;
+          float: left;
+          &:hover {
+            color: #fff;
+          }
+          height: 100%;
+          padding-right: 10px;
+          padding-left: 10px;
+          span {
+            font-size: 10px;
+            margin-left: 10px;
+          }
+        }
+        .cp-buy {
+          position: relative;
+        }
+        .user-ser {
+          position: relative;
+        }
+      }
     }
-    p{
-      color: yellow;
-    }
   }
 }
-
-// & 指向父选择器
-a{
-  color: blue;
-  &:hover{
-    color: red;
+.cp-buy-list {
+  display: none;
+  width: 80px;
+  height: 118px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  position: absolute;
+  top: 36px;
+  left: 0;
+  text-align: center;
+  padding-top: 4px;
+  a {
+    display: block;
+    height: 38px;
+    line-height: 34px;
+    text-align: center;
+    color: #ddd;
+  }
+  .cp-buy-list-line {
+    display: block;
+    width: 55px;
+    height: 1px;
+    background-color: #ddd;
+    margin-left: 13px;
   }
 }
-.content{
-  width: 500px;
-  &-title{
-    color: red;
+.user-ser-list {
+  display: none;
+  width: 80px;
+  height: 118px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  position: absolute;
+  top: 36px;
+  left: 0;
+  text-align: center;
+  padding-top: 4px;
+  a {
+    display: block;
+    height: 38px;
+    line-height: 34px;
+    text-align: center;
+    color: #ddd;
   }
-  &-main{
-    color: blue;
+  .cp-buy-list-line {
+    display: block;
+    width: 55px;
+    height: 1px;
+    background-color: #ddd;
+    margin-left: 13px;
   }
 }
-
-// @import 引入外部样式
-@import 'header.scss';
-
-// @mixin 混合器
-@mixin nostyle {
-  list-style: none;
-  li{
-    padding: 0;
-    color: blue;
-  }
+.cp-buy::after {
+  content: ' ';
+  display: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #fff;
+  border-left: 6px solid transparent;
+  left: 36px;
+  top: 25px;
 }
-.list{
-  width: 500px;
-  @include nostyle;
-}
-
-// 混合器传参
-@mixin common($w,$h,$c) {
-  width: $w;
-  height: $h;
-  color: $c;
-}
-.box1{
-  background-color: #ccc;
-  @include common(500px,200px,red);
-}
-.box2{
-  padding: 10px;
-  @include common(300px,100px,blue);
-}
-
-// 继承
-.box3{
-  padding: 20px;
-  margin: 10px;
-  font-size: 20px;
-}
-.box4{
-  width: 500px;
-  background: pink;
-  @extend .box3;
+.user-ser::after {
+  content: ' ';
+  display: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #fff;
+  border-left: 6px solid transparent;
+  left: 36px;
+  top: 25px;
 }
 
 

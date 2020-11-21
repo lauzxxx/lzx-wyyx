@@ -1,0 +1,39 @@
+div,h1,h2,h3,h4,h5,h6,body,ol,ul,p,th,td,dd,dt,form,fieldset,legend,input,textarea,select,figure,figcaption{
+    padding: 0;
+    margin: 0;
+}
+body,html {
+    font: 12px "微软雅黑",Arial;
+    height: 100%;
+}
+h1,h2,h3,h4,h5,h6,strong,b {
+    font-weight: normal;
+    font-size: 100%;
+}
+i,em {
+    font-style: normal;
+}
+a {
+    color: #333333;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+input {
+    outline: none;
+} /* 取消默认选中的焦点框样式 */
+img {
+    vertical-align: middle;
+} /* 解决div嵌套图片的像素差问题 */
+.clearfix {
+    *zoom: 1;
+}
+.clearfix::after {
+    display: block;
+    content: ' ';
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+/* 网页开始 */
