@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/swiper.min.css">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/iconfont.css">
+  <script src="./js/swiper.min.js"></script>
 </head>
 <body>
   <div id="top-content">
@@ -1964,6 +1966,41 @@
   </div>
   <div class="main">
     <div class="new-goods">
+      <dl class="nav-list">
+        <dt>- 热销榜 -</dt>
+        <dd>
+          <img src="../img/nav-list-l.webp" alt="">
+          <i>全站<br>热销榜</i>
+        </dd>
+        <dd>
+          <img src="../img/nav-list-l.webp" alt="">
+          <i>全站<br>热销榜</i>
+        </dd>
+        <dd>
+          <img src="../img/nav-list-l.webp" alt="">
+          <i>全站<br>热销榜</i>
+        </dd>
+        <dd>
+          <img src="../img/nav-list-l.webp" alt="">
+          <i>全站<br>热销榜</i>
+        </dd>
+        <dd>
+          <img src="../img/nav-list-l.webp" alt="">
+          <i>全站<br>热销榜</i>
+        </dd>
+        <dd>
+          <img src="../img/nav-list-l.webp" alt="">
+          <i>全站<br>热销榜</i>
+        </dd>
+        <dd>
+          <img src="../img/nav-list-l.webp" alt="">
+          <i>全站<br>热销榜</i>
+        </dd>
+        <dd class="dd-last">
+          <img src="../img/nav-list-l.webp" alt="">
+          <i>全站<br>热销榜</i>
+        </dd>
+      </dl>
       <div class="new-header clearfix">
         <div class="new-header-l clearfix">
           <h3>新品首发</h3>
@@ -1973,35 +2010,70 @@
           <a href="#">更多新品 ></a>
         </div>
       </div>
-      <ul class="new-goods-list">
-        <li>
-          <div class="goods-img"></div>
-          <p>2020新果上市，南非碧根果仁<br>150克</p>
-          <span>￥46</span>
-        </li>
-        <li>
-          <div class="goods-img"></div>
-          <p>2020新果上市，南非碧根果仁<br>150克</p>
-          <span>￥46</span>
-        </li>
-        <li>
-          <div class="goods-img"></div>
-          <p>2020新果上市，南非碧根果仁<br>150克</p>
-          <span>￥46</span>
-        </li>
-        <li>
-          <div class="goods-img"></div>
-          <p>2020新果上市，南非碧根果仁<br>150克</p>
-          <span>￥46</span>
-        </li>
-      </ul>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <ul class="new-goods-list">
+                <li>
+                  <div class="goods-img"></div>
+                  <p>2020新果上市，南非碧根果仁<br>150克</p>
+                  <span>￥46</span>
+                </li>
+                <li>
+                  <div class="goods-img"></div>
+                  <p>2020新果上市，南非碧根果仁<br>150克</p>
+                  <span>￥46</span>
+                </li>
+                <li>
+                  <div class="goods-img"></div>
+                  <p>2020新果上市，南非碧根果仁<br>150克</p>
+                  <span>￥46</span>
+                </li>
+                <li>
+                  <div class="goods-img"></div>
+                  <p>2020新果上市，南非碧根果仁<br>150克</p>
+                  <span>￥46</span>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <ul class="new-goods-list">
+                <li>
+                  <div class="goods-img"></div>
+                  <p>2020新果上市，南非碧根果仁<br>150克</p>
+                  <span>￥46</span>
+                </li>
+                <li>
+                  <div class="goods-img"></div>
+                  <p>2020新果上市，南非碧根果仁<br>150克</p>
+                  <span>￥46</span>
+                </li>
+                <li>
+                  <div class="goods-img"></div>
+                  <p>2020新果上市，南非碧根果仁<br>150克</p>
+                  <span>￥46</span>
+                </li>
+                <li>
+                  <div class="goods-img"></div>
+                  <p>2020新果上市，南非碧根果仁<br>150克</p>
+                  <span>￥46</span>
+                </li>
+              </ul>
+            </div>
+        </div>
+        
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        
+    </div>
     </div>
     <div class="hot-reduce">
       <div class="hot-reduce-inner clearfix">
         <div class="hot-header clearfix">
           <div class="hot-header-l clearfix">
             <h3>人气推荐</h3>
-            <small class="edit-red">编辑推荐</small>
+            <small class="edit-red small-checked">编辑推荐</small>
             <small class="hot-sold">热销总榜</small>
           </div>
           <div class="hot-header-r">
@@ -2016,7 +2088,7 @@
           </div>
         </div>
         <div class="hot-reduce-r">
-          <div class="hot-ul-box">
+          <div class="hot-ul-box-first hot-ul-box-show">
             <ul class="hot-ul-t">
               <li>
                 <a href="#">
@@ -2063,6 +2135,310 @@
                 <span>￥1499</span>
               </li>
             </ul>
+          </div>
+          <div class="hot-ul-box-second">
+            <ul class="hot-ul-t">
+              <li>
+                <a href="#">
+                  <img src="../img/hotreduce3.webp" alt="">
+                </a>
+                <p>轻弹云朵居家拖鞋</p>
+                <span>￥9.9</span>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/hotreduce3.webp" alt="">
+                </a>
+                <p>轻弹云朵居家拖鞋</p>
+                <span>￥9.9</span>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/hotreduce3.webp" alt="">
+                </a>
+                <p>轻弹云朵居家拖鞋</p>
+                <span>￥9.9</span>
+              </li>
+            </ul>
+            <ul class="hot-ul-b">
+              <li>
+                <a href="#">
+                  <img src="../img/hotreduce3.webp" alt="">
+                </a>
+                <p>轻弹云朵居家拖鞋</p>
+                <span>￥9.9</span>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/hotreduce3.webp" alt="">
+                </a>
+                <p>轻弹云朵居家拖鞋</p>
+                <span>￥9.9</span>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../img/hotreduce3.webp" alt="">
+                </a>
+                <p>轻弹云朵居家拖鞋</p>
+                <span>￥9.9</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="limited-sold clearfix">
+      <div class="limited-header clearfix">
+        <div class="limited-header-l">
+          <h3>限时购</h3>
+        </div>
+        <div class="limited-header-r">
+          <a href="#">更多抢购 ></a>
+        </div>
+      </div>
+      <div class="limited-timer">
+        <div class="screenHd"><span></span>点场</div>
+        <div class="line"></div>
+        <div class="screenEndTips">距离结束还剩</div>
+        <div class="m-countDown">
+          <span class="w-cd j-hour"></span>
+          <div class="colon">:</div>
+          <span class="w-cd j-min"></span>
+          <div class="colon">:</div>
+          <span class="w-cd j-second"></span>
+        </div>
+        <div class="seeMoreBtn">查看全部 ></div>
+      </div>
+      <div class="limited-goods">
+        <ul>
+          <li class="clearfix limited-goods1">
+            <div class="limited-li-l">
+              <img src="../img/limited1.webp" alt="">
+            </div>
+            <div class="limited-li-r">
+              <p>男式自动扣 荔枝纹皮带</p>
+              <small>舒适摔纹牛皮，便捷自动扣</small>
+              <span class="numBarIn"></span>
+              <i>还剩0件</i>
+              <div>
+                <span class="nowPrice">限时价</span>
+                <span class="now">￥121</span>
+                <span class="yuanPrice">￥169</span>
+              </div>
+              <span class="goSee">去看看</span>
+            </div>
+          </li>
+          <li class="clearfix limited-goods2">
+            <div class="limited-li-l">
+              <img src="../img/limited2.webp" alt="">
+            </div>
+            <div class="limited-li-r">
+              <p>貔貅黄金转运珠手链</p>
+              <small>守护你的吉祥小萌物</small>
+              <span class="numBarIn"></span>
+              <i>还剩35件</i>
+              <div>
+                <span class="nowPrice">限时价</span>
+                <span class="now">￥879</span>
+                <span class="yuanPrice">￥999</span>
+              </div>
+              <span class="goSee">立即抢购</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="welfare-com clearfix">
+      <div class="welfare-com-inner">
+        <div class="welfare-com-header clearfix">
+          <div class="welfare-com-header-l">
+            <h3>福利社</h3>
+          </div>
+          <div class="welfare-com-header-r">
+            <a href="#">查看全部福利 ></a>
+          </div>
+        </div>
+        <div class="welfare-com-banner"></div>
+        <div class="special-offer">
+          <div class="special-offer-header clearfix">
+            <div class="special-offer-header-l">
+              <h3>今日特价</h3>
+            </div>
+            <div class="special-offer-header-r">
+              <a href="#">查看全部 ></a>
+            </div>
+          </div>
+          <div class="special-offer-goods">
+            <ul class="clearfix">
+              <li class="clearfix">
+                <div class="offer-goods-l"></div>
+                <div class="offer-goods-r">
+                  <p>男式咖啡碳保暖内衣2.0</p>
+                  <span class="offer-intime">限时价&nbsp;￥</span>
+                  <span class="offer-yuan">169</span>
+                  <div class="offer-buy">立即抢购</div>
+                </div>
+              </li>
+              <li class="clearfix">
+                <div class="offer-goods-l"></div>
+                <div class="offer-goods-r">
+                  <p>男式咖啡碳保暖内衣2.0</p>
+                  <span class="offer-intime">限时价&nbsp;￥</span>
+                  <span class="offer-yuan">169</span>
+                  <div class="offer-buy">立即抢购</div>
+                </div>
+              </li>
+              <li class="clearfix">
+                <div class="offer-goods-l"></div>
+                <div class="offer-goods-r">
+                  <p>男式咖啡碳保暖内衣2.0</p>
+                  <span class="offer-intime">限时价&nbsp;￥</span>
+                  <span class="offer-yuan">169</span>
+                  <div class="offer-buy">立即抢购</div>
+                </div>
+              </li>
+              <li class="clearfix">
+                <div class="offer-goods-l"></div>
+                <div class="offer-goods-r">
+                  <p>男式咖啡碳保暖内衣2.0</p>
+                  <span class="offer-intime">限时价&nbsp;￥</span>
+                  <span class="offer-yuan">169</span>
+                  <div class="offer-buy">立即抢购</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="welfare-com-right">
+          <div class="stored-goods">
+            <div class="stored-warp1 clearfix">
+              <h3>量贩囤货</h3>
+              <a href="#">全部 ></a>
+            </div>
+            <div class="stored-warp2 clearfix">
+              <div class="stored-goods-img"></div>
+              <div class="stored-goods-inf">
+                <p>本色竹浆懒人抹布...</p>
+                <div class="stored-goods-inf-warp clearfix">
+                  <span class="stored-goods-price">￥119</span>
+                  <span class="stored-goods-incar"></span>
+                </div>
+              </div>
+            </div>
+            <div class="stored-warp2 clearfix">
+              <div class="stored-goods-img"></div>
+              <div class="stored-goods-inf">
+                <p>本色竹浆懒人抹布...</p>
+                <div class="stored-goods-inf-warp clearfix">
+                  <span class="stored-goods-price">￥119</span>
+                  <span class="stored-goods-incar"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="stored-goods">
+            <div class="stored-warp1 clearfix">
+              <h3>今日买赠</h3>
+              <a href="#">全部 ></a>
+            </div>
+            <div class="stored-warp2 clearfix">
+              <div class="stored-goods-img"></div>
+              <div class="stored-goods-inf">
+                <p>本色竹浆懒人抹布...</p>
+                <div class="stored-goods-inf-warp clearfix">
+                  <span class="stored-goods-price">￥119</span>
+                  <span class="stored-goods-incar"></span>
+                </div>
+              </div>
+            </div>
+            <div class="stored-warp2 clearfix">
+              <div class="stored-goods-img"></div>
+              <div class="stored-goods-inf">
+                <p>本色竹浆懒人抹布...</p>
+                <div class="stored-goods-inf-warp clearfix">
+                  <span class="stored-goods-price">￥119</span>
+                  <span class="stored-goods-incar"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="home-life">
+      <div class="home-life-header clearfix">
+        <div class="home-life-header-l">
+          <h3>居家生活</h3>
+        </div>
+        <div class="home-life-header-r clearfix">
+          <div class="home-life-header-r-nav">
+            <div>口碑好物</div><span>/</span>
+            <div>抑菌除螨</div><span>/</span>
+            <div>秋冬换新</div><span>/</span>
+            <div>收纳好物</div><span>/</span>
+            <div>北欧原木</div><span>/</span>
+            <div>餐厨爆款清单</div><span>/</span>
+            <div>床品件套</div>
+          </div>
+          <a href="#">查看更多 ></a>
+        </div>
+      </div>
+      <div class="home-life-banner">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="../img/homelifebanner1.webp" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="../img/homelifebanner2.webp" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="../img/homelifebanner3.webp" alt="">
+              </div>
+          </div>
+          <!-- 如果需要分页器 -->
+          <div class="swiper-pagination"></div>
+          
+          <!-- 如果需要导航按钮 -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+      </div>
+      </div>
+      <div class="home-life-goods">
+        <div class="home-life-goods-a">
+          <div class="home-goods-imgbox"></div>
+          <div class="home-goods-inf">
+            <p>
+              耐热玻璃把手杯防滑带杯盖会变色的小胖喵
+            </p>
+            <span>￥49</span>
+          </div>
+        </div>
+        <div class="home-life-goods-a">
+          <div class="home-goods-imgbox"></div>
+          <div class="home-goods-inf">
+            <p>
+              耐热玻璃把手杯防滑带杯盖会变色的小胖喵
+            </p>
+            <span>￥49</span>
+          </div>
+        </div>
+        <div class="home-life-goods-a">
+          <div class="home-goods-imgbox"></div>
+          <div class="home-goods-inf">
+            <p>
+              耐热玻璃把手杯防滑带杯盖会变色的小胖喵
+            </p>
+            <span>￥49</span>
+          </div>
+        </div>
+        <div class="home-life-goods-a">
+          <div class="home-goods-imgbox"></div>
+          <div class="home-goods-inf">
+            <p>
+              耐热玻璃把手杯防滑带杯盖会变色的小胖喵
+            </p>
+            <span>￥49</span>
           </div>
         </div>
       </div>
