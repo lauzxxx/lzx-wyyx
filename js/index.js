@@ -100,3 +100,23 @@ var mySwiper = new Swiper ('.swiper-container', {
     //   el: '.swiper-scrollbar',
     // },
   }) 
+  
+  //滚动后导航栏改变
+  window.onscroll = function (){
+        var t = document.documentElement.scrollTop;
+        if ( t >= 120 ) {
+          $( '.top-b-nav' ).css('display','none')
+          $( '.top-b-nav2' ).css('display','block')
+        } else {
+          $( '.top-b-nav' ).css( 'display','flex' )
+          $( '.top-b-nav2' ).css( 'display','none' )
+      }
+        var t2 = document.documentElement.scrollTop;
+        if ( t2 >= 619 ){
+          $ ( '.nav-right' ).css( {'position':'fixed','top':'60px','right':'1px'} )
+          $ ( '.nav-list' ).css( {'position':'fixed','top':'60px'} )
+        } else {
+            $ ( '.nav-right' ).css( {'position':'absolute','right':'1px','top':'619px'} )
+            $ ( '.nav-list' ).css( {'position':'absolute','top':'0','left':'275px'} )
+        }
+  };

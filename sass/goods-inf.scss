@@ -1,0 +1,257 @@
+#j-app {
+    width: 100%;
+    .g-bd {
+        width: 1090px;
+        margin: 0 auto;
+        .m-crumb {
+            font-size: 12px;
+            color: #333;
+            line-height: 1;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .m-slide {
+            width: 430px;
+            float: left;
+            .m-imgbox {
+                width: 430px;
+                height: 430px;
+                background: #f4f4f4;
+                margin-bottom: 14px;
+            }
+            .small-imgbox {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 14px;
+                .smallImg {
+                    width: 78px;
+                    height: 78px;
+                    border: 1px solid #e8e8e8;
+                    cursor: pointer;
+                    &:hover {
+                        border: 1px solid #b4a078;
+                    }
+                }
+            }
+            .w-button {
+                width: 129px;
+                height: 26px;
+                border: 1px solid #b4a078;
+                background-color: #f5f3ef;
+                color: #b4a078;
+                text-align: center;
+                line-height: 26px;
+                cursor: pointer;
+            }
+        }
+        .m-info {
+            width: 620px;
+            float: right;
+            margin-top: 10px;
+            .intro-l {
+                float: left;
+                h4 {
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 20px;
+                    margin-bottom: 6px;
+                }
+                .desc {        
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #999;
+                }
+            }
+            .intro-r {
+                float: right;
+                .f-fz20 {
+                    font-size: 20px;
+                    color: #E36844;
+                    font-weight: 400;
+                    line-height: 1.2;
+                }
+                .f-fz13 {
+                    font-size: 13px;
+                    line-height: 1.2;
+                    &:hover {
+                        color: #b4a078;
+                    }
+                }
+            }
+            .u-formctr {
+                margin-top: 20px;
+                background-color: #f5f3ef;
+                border-top: 1px dotted #dedede;
+                border-bottom: 1px dotted #dedede;
+                padding: 0 0 13px;
+                line-height: 24px;
+                font-size: 13px;
+                margin-bottom: 20px;
+                .label {
+                    width: 55px;
+                    font-size: 13px;
+                    color: #666;
+                    margin-left: 10px
+                }
+                .pr-box {
+                    .rmb {
+                        margin-left: 0;
+                        line-height: 30px;
+                        color: #d7282d;
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+                    .num {
+                        font-size: 28px;
+                        line-height: 30px;
+                        margin-left: 2px;
+                        color: #d7282d;
+                        font-weight: 700;
+                    }
+                }
+                .pro a {
+                    display: block;
+                    margin-left: 66px;
+                }
+                .allTag {
+                    display: inline-block;
+                    height: 20px;
+                    line-height: 20px;
+                    color: #fff;
+                    font-size: 12px;
+                    padding: 0 5px;
+                    background-color: #e36844;
+                    background-image: linear-gradient(270deg,#FF8659 0,#FE2C30 100%);
+                    margin-right: 10px;
+                    margin-left: 30px;
+                }
+                .shopBack a {
+                    margin-left: 16px;
+                }
+                .shopLim i {
+                    margin-left: 29px;
+                    color: #666;
+                }
+                .postage i {
+                    margin-left: 29px;
+                }
+                .shopSend {
+                    border-bottom: 1px dotted #dedede ;
+                    i {
+                        margin-left: 29px;
+                    }
+                }
+                .shopServer {
+                    span {
+                        display: block;
+                        float: left;
+                    }
+                    i {
+                        display: block;
+                        width: 500px;
+                        float: left;
+                    }
+                }
+                .remaker i{
+                    margin-left: 29px;
+                }
+            }
+            .specProp {
+                margin-left: 10px;
+                .main-color {
+                    float: left;
+                    font-size: 12px;
+                    color: #666;
+                    width: 54px;
+                    line-height: 50px;
+                }
+                .cont {
+                    float: left;
+                    width: 54px;
+                    height: 54px;
+                    background: #f4f4f4 url(../img/maincolor.webp) center;
+                    border: 2px solid #b4a078;
+                }
+            }
+            .goods-num {
+                margin-left: 10px;
+                margin-top: 25px;
+                .goods-num-tit {
+                    float: left;
+                    font-size: 12px;
+                    color: #666;
+                    width: 54px;
+                    line-height: 30px;
+                }
+                .num-count {
+                    float: left;
+                    border: 1px solid #ddd;
+                    height: 30px;
+                    .less {
+                        float: left;
+                        width: 35px;
+                        height: 30px;
+                        line-height: 30px;
+                        text-align: center;
+                        border-right: 1px solid #ddd;
+                        cursor: pointer;
+                    }
+                    .nowNum {
+                        float: left;
+                        width: 60px;
+                        height: 30px;
+                        line-height: 30px;
+                        text-align: center;
+                    }
+                    .more {
+                        float: left;
+                        width: 35px;
+                        height: 30px;
+                        line-height: 30px;
+                        text-align: center;
+                        border-left: 1px solid #ddd;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .userDo {
+                margin-top: 30px;
+                padding-left: 12px;
+                display: flex;
+                .buyNow {
+                    width: 166px;
+                    height: 49px;
+                    line-height: 49px;
+                    border: 1px solid #b4a078;
+                    color: #b4a078;
+                    text-align: center;
+                    font-size: 18px;
+                    background-color: #f5f3ef;
+                    margin-right: 10px;
+                    cursor: pointer;
+                }
+                .addToCar {
+                    width: 166px;
+                    height: 49px;
+                    line-height: 49px;
+                    border: 1px solid #b4a078;
+                    color: #fff;
+                    text-align: center;
+                    font-size: 18px;
+                    background-color: #b4a078;
+                    margin-right: 10px;
+                    cursor: pointer;
+                }
+                .storeNow {
+                    width: 48px;
+                    height: 48px;
+                    border: 1px solid #cccccc;
+                    color: #cccccc;
+                    text-align: center;
+                    line-height: 48px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

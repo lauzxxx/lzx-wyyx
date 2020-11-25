@@ -324,20 +324,87 @@ body {
         }
       }
     }
+    .top-b-nav2 {
+      width: 100%;
+      height: 50px;
+      background-color: #fff;
+      position: fixed;
+      display: none;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      .top-b-nav2-inner {
+        width: 1090px;
+        height: 50px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .yx-logo {
+          display: block;
+          width: 126px;
+          height: 30px;
+          background: url(../img/jlt1.png) no-repeat 0 -438px;
+        }
+        .top-b-nav2-index {
+          font-weight: 700;
+          color: #CC9756;
+          border-bottom: 3px solid #CC9756;
+          cursor: pointer;
+        }
+        .top-b-nav2-else {
+          font-weight: 700;
+          cursor: pointer;
+          &:hover {
+            color: #CC9756;
+            border-bottom: 3px solid #CC9756;
+          }
+        }
+        .user-inf {
+          display: block;
+          width: 20px;
+          height: 22px;
+          background: url(../img/jlt1.png) no-repeat 0 -754px;
+          cursor: pointer;
+        }
+        .top-nav2-shopcar {
+          position: relative;
+          display: block;
+          width: 19px;
+          height: 22px;
+          background: url(../img/jlt1.png) no-repeat -1px -81px;
+          cursor: pointer;
+          em {
+            position: absolute;
+            left: 10px;
+            top: -10px;
+            display: block;
+            width: 19px;
+            height: 19px;
+            color: #fff;
+            line-height: 19px;
+            text-align: center;
+            background: url(../img/jlt1.png) no-repeat 0 -51px;
+          }
+        }
+      }
+    }
   }
 }
 .banner {
-  width: 100%;
+  width: 1903px;
+  img {
+    width: 1903px;
+  }
 }
 .main {
   width: 100%;
-  .new-goods {
-    width: 1090px;
-    margin: 0 auto 60px;
+  .new-goods-warp {
+    width: 100%;
     position: relative;
     .nav-list {
       position: absolute;
-      left: -130px;
+      left: 275px;
       top: 0;
       width: 108px;
       height: 362px;
@@ -380,49 +447,53 @@ body {
         border-bottom: none;
       }
     }
-    .new-header-l {
-      float: left;
-      padding-top: 12px;
-      h3 {
-        font-size: 28px;
-        font-weight: 700;
+    .new-goods {
+      width: 1090px;
+      margin: 0 auto 60px;
+      .new-header-l {
         float: left;
-        margin-right: 20px;
-        line-height: 66px;
-      }
-      small {
-        display: inline-block;
-        margin-top: 32px;
-      }
-    }
-    .new-header-r {
-      float: right;
-      padding-top: 12px;
-      a {
-        display: inline-block;
-        margin-top: 32px;
-      }
-    }
-    .new-goods-list {
-      display: flex;
-      justify-content: space-between;
-      text-align: center;
-      .goods-img {
-        width: 265px;
-        height: 265px;
-        background: #f4f4f4 url(../img/good2.webp) no-repeat 0;
-        &:hover {
-          background: url(../img/good3.webp) no-repeat 0;
+        padding-top: 12px;
+        h3 {
+          font-size: 28px;
+          font-weight: 700;
+          float: left;
+          margin-right: 20px;
+          line-height: 66px;
+        }
+        small {
+          display: inline-block;
+          margin-top: 32px;
         }
       }
-      p {
-        font-weight: bold;
-        line-height: 20px;
-        margin-top: 26px;
-        cursor: pointer;
+      .new-header-r {
+        float: right;
+        padding-top: 12px;
+        a {
+          display: inline-block;
+          margin-top: 32px;
+        }
       }
-      span {
-        color: red;
+      .new-goods-list {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        .goods-img {
+          width: 265px;
+          height: 265px;
+          background: #f4f4f4 url(../img/good2.webp) no-repeat 0;
+          &:hover {
+            background: url(../img/good3.webp) no-repeat 0;
+          }
+        }
+        p {
+          font-weight: bold;
+          line-height: 20px;
+          margin-top: 26px;
+          cursor: pointer;
+        }
+        span {
+          color: red;
+        }
       }
     }
   }
