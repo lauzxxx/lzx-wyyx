@@ -18,6 +18,46 @@
                 height: 430px;
                 background: #f4f4f4;
                 margin-bottom: 14px;
+                display: none;
+                position: relative;
+                img {
+                    width: 430px;
+                    height: 430px;
+                }
+                .img-mask {
+                    width: 230px;
+                    height: 230px;
+                    background-color: orange;
+                    opacity: 0.4;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    cursor: move;
+                    display: none;
+                }
+                .max-box {
+                    width: 430px;
+                    height: 430px;
+                    position: absolute;
+                    left: 440px;
+                    top: 0;
+                    overflow: hidden;
+                    display: none;
+                    img {
+                        width: 800px;
+                        height: 800px;
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+                }
+                .active {
+                    display: block;
+                }
+            }
+            .show {
+                display: block;
             }
             .small-imgbox {
                 display: flex;
@@ -219,6 +259,7 @@
                 padding-left: 12px;
                 display: flex;
                 .buyNow {
+                    display: block;
                     width: 166px;
                     height: 49px;
                     line-height: 49px;

@@ -139,9 +139,10 @@
                     width: 245px;
                     height: 401px;
                     float: left;
-                    margin-right: 10px;
+                    margin-right: 5px;
                     margin-bottom: 50px;
                     .m-item-hd {
+                        display: block;
                         width: 245px;
                         height: 245px;
                         cursor: pointer;
@@ -188,6 +189,7 @@
                     float: left;
                     margin-bottom: 50px;
                     .m-item-hd {
+                        display: block;
                         width: 245px;
                         height: 245px;
                         cursor: pointer;
