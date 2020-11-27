@@ -13,7 +13,7 @@ $(function(){
                         if ( item.code === obj.code ){
                             domStr += `
                             <li>
-                            <input type="checkbox">
+                            <input type="checkbox" class="one">
                             <div class="list-imgBox">
                                 <img src="${obj.img1}" alt="">
                             </div>
@@ -45,80 +45,129 @@ $(function(){
 })
 //全选全不选
 function changeAll (){
-    $( '.selectAll' ).click(function (){
-        if ( $('.selectAll').prop('checked') ) {
-            $('.carList li input').each(function (index,item){
-                $(item).prop('checked',true)
-            })
-        } else {
-            $('.carList li input').each(function (index,item){
-                $(item).prop('checked',false)
-            })
+    var tPrice = 0
+    var oPrice
+    var pPrice = 0
+    var goodsNum
+    function tpSum(){
+        $('.totalPrice span').each(function(index,item){
+            pPrice += Number($(item).text())
+        })
+        $('.num').text(pPrice)
+        pPrice = 0
+    }
+    $('.carList li').each(function(index,item){
+        oPrice = $('.carList li .onePrice span').eq(index).text()
+        tPrice = $('.carList .nowNum').eq(index).text()*oPrice
+        $('.carList .totalPrice span').eq(index).text(tPrice)
+        tpSum()
+    })
+    //事件委托
+    $('#goodsCar').on('click',function(e){
+        var target = e.target
+        //全选的点击
+        if (target.className == 'selectAll'){
+            if ( $('.selectAll').prop('checked') ) {
+                $('.carList li input').each(function (index,item){
+                    $(item).prop('checked',true)
+                })
+            } else {
+                $('.carList li input').each(function (index,item){
+                    $(item).prop('checked',false)
+                })
+            }
         }
-    });
-    $( '.carList li input' ).each(function (index,item){
-        $(item).click(function(){
-            var flag = true;
-            $( '.carList li input' ).each(function(ind,ite){
-                if (!$(ite).prop('checked')) {
-                    $( '.selectAll' ).prop('checked',false)
-                    flag = false;
-                    return false;
+        //单个选中按钮的点击
+        if (target.className == 'one') {
+            var flag = true
+            $('.one').each(function(index,item){
+                if (!$(item).prop('checked')) {
+                    $('.selectAll').prop('checked',false)
+                    flag = false
+                    return false
                 }
                 if (flag) {
                     $( '.selectAll' ).prop('checked',true)
                 }
             })
-        })
-    });
-    //删除单条
-    $( '.delOne' ).each(function (index,item){
-        $(item).click(function (){
-            // console.log($('.totalPrice span').eq(index).text());
-            // console.log(totalPrice);
-            $(this).parent().parent().remove()
-            // totalPrice -= Number($('.totalPrice span').eq(index).text())
-            // $( '.num' ).text(totalPrice)
-        })
+        }
+        //删除一条按钮的点击
+        if (target.className == 'delOne'){
+            $(target).parent().parent().remove()
+            var li = document.querySelectorAll('.carList li')
+            if (li.length < 1){
+                $('.carList').html('<li class="noGoods"><span>购物车还是空的！</span></li>')
+            }
+            tpSum()
+            //判断全选
+            flag = true
+            $('.one').each(function(index,item){
+                if (!$(item).prop('checked')) {
+                    $('.selectAll').prop('checked',false)
+                    flag = false
+                    return false
+                }
+                if (flag) {
+                    $( '.selectAll' ).prop('checked',true)
+                }
+            })
+        }
+        //批量删除
+        if (target.className == 'delSome'){
+            $( '.carList li input:checked' ).each(function (index,item){
+                $(item).parent().remove()
+                tpSum()
+            })
+            var li = document.querySelectorAll('.carList li')
+            if (li.length < 1){
+                $('.carList').html('<li class="noGoods"><span>购物车还是空的！</span></li>')
+            }
+            //判断全选
+            flag = true
+            $('.one').each(function(index,item){
+                if (!$(item).prop('checked')) {
+                    $('.selectAll').prop('checked',false)
+                    flag = false
+                    return false
+                }
+                if (flag) {
+                    $( '.selectAll' ).prop('checked',true)
+                }
+            })
+        }
+        //点击-后价钱的计算
+
+        // console.log(target.className);
     })
-    //批量删除
-    $( '.delSome' ).click(function (){
-        $( '.carList li input:checked' ).each(function (index,item){
-            totalPrice -= $('.totalPrice span').eq(index).text()
-            $('.num').text(totalPrice)
-            $(item).parent().remove()
-        })
-    })
-    //购物车价钱计算
-    var goodsNum
-    var onePrice
-    var totalPrice = 0
+    // 购物车价钱计算
     $( '.carList li .num-count' ).each(function (index,item){
-        totalPrice += Number($('.carList li .totalPrice span').eq(index).text())
-        $( '.num' ).text(totalPrice)
+        tPrice += Number($('.carList li .totalPrice span').eq(index).text())
+        // $( '.num' ).text(tPrice)
         $('.carList li .num-count .less').eq(index).click(function (){
-            totalPrice -= Number($('.carList li .onePrice span').eq(index).text())
+            tPrice -= Number($('.carList li .onePrice span').eq(index).text())
             goodsNum = Number( $('.carList li .num-count .nowNum').eq(index).text() )
-            onePrice = Number ( $('.carList li .onePrice span').eq(index).text() )
+            oPrice = Number ( $('.carList li .onePrice span').eq(index).text() )
             goodsNum--
             if ( goodsNum <= 0 ) {
                 goodsNum = 0;
             }
             $('.carList li .num-count .nowNum').eq(index).text(goodsNum)
-            $('.carList li .totalPrice span').eq(index).text(goodsNum*onePrice)
-            $( '.num' ).text(totalPrice)
+            $('.carList li .totalPrice span').eq(index).text(goodsNum*oPrice)
+            tpSum()
+            // $( '.num' ).text(tPrice)
         })
         $('.carList li .num-count .more').eq(index).click(function (){
-            totalPrice += Number($('.carList li .onePrice span').eq(index).text())
+            tPrice += Number($('.carList li .onePrice span').eq(index).text())
             goodsNum = Number( $('.carList li .num-count .nowNum').eq(index).text() )
-            onePrice = Number ( $('.carList li .onePrice span').eq(index).text() )
+            oPrice = Number ( $('.carList li .onePrice span').eq(index).text() )
             goodsNum++
             if ( goodsNum >= 99 ) {
                 goodsNum = 99;
             }
             $('.carList li .num-count .nowNum').eq(index).text(goodsNum)
-            $('.carList li .totalPrice span').eq(index).text(goodsNum*onePrice)
-            $( '.num' ).text(totalPrice)
+            $('.carList li .totalPrice span').eq(index).text(goodsNum*oPrice)
+            tpSum()
+            // $( '.num' ).text(tPrice)
         })
     })
 }
